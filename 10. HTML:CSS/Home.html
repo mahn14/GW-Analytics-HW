@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel='stylesheet' href='styles.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Header LEFT -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">House Price Regression</a>
+    </div>
+
+
+
+
+
+    <!-- Header RIGHT -->
+    <div class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
+        <!-- Dropdown PLOT --> 
+        <li class="dropdown">
+          <a class="dropbtn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> Plots<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="distplot.html">Distribution</a></li>
+              <li><a href="missingvalues.html">Missing Values</a></li>
+              <li><a href="boxplot.html">Categorical Correlation</a></li>
+              <li><a href="corrplot.html">Numerical Correlation</a></li>
+            </ul>
+        </li>
+        <!-- Tabs -->
+        <li><a href="comparison.html">Comparisons</a></li>
+        <li><a href="train.html" target="_blank">Data</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<!-- MAIN TEXT -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-12 text-center"> <p> </p> </div>
+    <div class="col-sm-7 text-left"> 
+      <h1> Intro </h1>
+      <hr> <!-- Horizontal Line -->
+        <p>
+          The goal of this project was to create a regression model to predict the SalePrice variable of over a thousand houses in Ames, Iowa. Our strategy revolved around using mainly linear regression, evaluated using root-mean-squared-error. This process was divided into several steps.  
+        </p>
+        <p>
+          <b>Data preprocessing.</b> This step focuses on readying the data even before exploring it in depth. While the data set was provided in a neat .csv file, there were other problems such as missing values or skewed distributions.
+        </p>
+        <p>
+          <b>Data exploration.</b> The next step was to examine the variables and their relationships. A deeper understanding the variables allows for a better model.
+        </p>
+        <p>
+          <b>Data processing.</b> After consolidating our final variables, fixing them to our liking, and understanding their relationships, it is time to prepare them specifically for the models we will be using. While some of the parts in this step is almost identical to preprocessing, now we are focusing on enhancing our varialbes rather than fixing.
+        </p>
+        <p>
+          <b>Model Building.</b> This can be broken into many steps. The first would be in actually training our models themselves by finding optimal hyperparameters to be used for our final model. We chose a gridsearch algorithm using 5-folds.
+        </p>
+        <p>
+          <b>Model Validation.</b> Now that we have our final model, we must make sure that it is viable for generalizations. We test our model using data that we had set aside for this purpose.
+        </p>
+        <p>
+          <b>Summary</b> It is always a good idea to take validation a step further and look once again at the big picture. Did we meet our initial goals? If not, what has changed since then? We must determine at this point whether to close the project or start again at a previous step.
+        </p>
+    </div>
+
+    <div class="col-sm-3 text-left">
+      <h1>Visualizations</h1>
+      <hr>
+      <a href="distplot.html"><img src="plots/distplot.png" height="150" width="150" hspace="20"></a>
+      <a href="missingvalues.html"><img src="plots/missingvalues.png" hheight="150" width="150"></a>
+      <a href="boxplot.html"><img src="plots/boxplot.png" height="150" width="150" hspace="20" vspace="10"></a>
+      <a href="corrplot.html"><img src="plots/corrplot.png" height="150" width="150"></a>
+      
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Michael Ahn, Sam Timura, Salil Deshpande</p>
+</footer>
+
+</body>
+</html>

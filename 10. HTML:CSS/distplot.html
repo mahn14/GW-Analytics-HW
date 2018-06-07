@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Distribution Plot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel='stylesheet' href='styles.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Header LEFT -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">House Price Regression</a>
+    </div>
+
+    <!-- Header RIGHT -->
+    <div class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
+        <!-- Dropdown PLOT --> 
+        <li class="dropdown">
+          <a class="dropbtn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> Plots<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="distplot.html">Distribution</a></li>
+              <li><a href="missingvalues.html">Missing Values</a></li>
+              <li><a href="boxplot.html">Categorical Correlation</a></li>
+              <li><a href="corrplot.html">Numerical Correlation</a></li>
+            </ul>
+        </li>
+        <!-- Tabs -->
+        <li><a href="comparison.html">Comparisons</a></li>
+        <li><a href="train.html" target="_blank">Data</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<!-- MAIN TEXT -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+        <div class="col-sm-12 text-center"> <p> </p> </div>
+    <div class="col-sm-7 text-left"> 
+      <h1> SalePrice Distribution </h1>
+      <hr> <!-- Horizontal Line -->
+          
+          <div class="col-md-6">
+              <a href="#"><img src="plots/distplot.png" class="center-block"></a>
+          </div>
+          <div class="col-md-6">
+              <a href="#" ><img src="plots/distplot2.png" class="center-block"></a>
+          </div>
+
+        <p>
+          One of the most immediate steps when trying to predict the SalePrice variable is... to look at SalePrice!
+        </p>
+        <p>
+          Given that linear regression models work better when the variables are Normally distributed, seeing that the SalePrice variable comes with a pretty significant right skew should raise some concerns. Fortunately, a quick fix is applying a log transformation to the variable itself. Since interpretability of the model is not much a concern for us, this should be fine. On another note, it is important to remember that we are now predicting log(SalePrice) not SalePrice.
+        </p>
+    </div>
+
+    <div class="col-sm-3 text-left">
+      <h1>Visualizations</h1>
+      <hr>
+      <a href="distplot.html"><img src="plots/distplot.png" height="150" width="150" hspace="20" id="image"></a>
+      <a href="missingvalues.html"><img src="plots/missingvalues.png" hheight="150" width="150"></a>
+      <a href="boxplot.html"><img src="plots/boxplot.png" height="150" width="150" hspace="20" vspace="10"></a>
+      <a href="corrplot.html"><img src="plots/corrplot.png" height="150" width="150"></a>
+      
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Michael Ahn, Sam Timura, Salil Deshpande</p>
+</footer>
+
+</body>
+</html>
